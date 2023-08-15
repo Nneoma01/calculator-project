@@ -1,0 +1,53 @@
+body{
+    padding: 0;
+    margin: 0 auto;
+    width: 390px;
+}
+.container{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 93vh;
+    border-radius: 20px;
+    padding-top: 50px;
+}
+.icon{
+    text-align: center;
+}
+#icon{
+    border: solid black;
+    background-color: rgb(58, 57, 57);
+    width: 20%;
+    height: 20px;
+    padding: 10px;
+}
+.cal-display{
+    padding-top: 60px;
+    padding-left: 250px;
+}
+.cal-working{
+    font-size: 25px;
+    padding-left: 25px;
+}
+.cal-answer{
+    font-size: 40px;
+}
+.cal-symbols{
+    background-color: rgb(58, 57, 57);
+    height: 55%;
+    margin: 0 10px;
+    border-radius: 15px;
+    padding: 20px 10px ;
+    
+}    
+.cal-symbols input{
+    border: 0;
+    width: 70px;
+    height: 65px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin:  5px 7px;
+}
