@@ -22,15 +22,19 @@ body{
     padding: 10px;
 }
 .cal-display{
-    padding-top: 60px;
-    padding-left: 250px;
+    height: 20%;
+    padding: 100px 20px 0 0;
+    text-align: right;
+}
+.cal-working, .cal-answer{
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: right;
+    border: none;
+    background: transparent;
 }
 .cal-working{
-    font-size: 25px;
-    padding-left: 25px;
-}
-.cal-answer{
-    font-size: 40px;
+    margin-bottom: 20px;
 }
 .cal-symbols{
     background-color: rgb(58, 57, 57);
