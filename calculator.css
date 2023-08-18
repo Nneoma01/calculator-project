@@ -1,15 +1,16 @@
 body{
     padding: 0;
-    margin: 0 auto;
+    height: 100vh;
     width: 390px;
+    margin: auto;
+
 }
 .container{
     width: 100%;
     background-color: black;
     color: white;
-    height: 93vh;
     border-radius: 20px;
-    padding-top: 50px;
+    padding: 50px 0 20px 0;
 }
 .icon{
     text-align: center;
@@ -18,20 +19,22 @@ body{
     border: solid black;
     background-color: rgb(58, 57, 57);
     width: 20%;
-    height: 20px;
+    height: 20%;
     padding: 10px;
 }
-.cal-display{
-    height: 20%;
-    padding: 100px 20px 0 0;
-    text-align: right;
+.display{
+    height: 40%;
+    padding: 150px 20px 20px 0;
+    text-align: end;
+    
 }
-.cal-working, .cal-answer{
+.display input{
     font-size: 25px;
-    margin-bottom: 20px;
     text-align: right;
     border: none;
+    border-radius: 15px;
     background: transparent;
+    padding: 20px;
 }
 .cal-working{
     margin-bottom: 20px;
@@ -44,7 +47,7 @@ body{
     padding: 20px 10px ;
     
 }    
-.cal-symbols input{
+.cal-symbols button{
     border: 0;
     width: 70px;
     height: 65px;
