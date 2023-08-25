@@ -1,31 +1,46 @@
 body{
-    padding: 0;
-    height: 100vh;
+    height: 100%;
     width: 390px;
-    margin: auto;
-    background-color: pin;
-
+    margin: 0 auto;
+    background-color: whitesmoke;
 }
-.container{
-    width: 100%;
-    background-color: black;
+:root{
+    --white1: white;
+    --white2: whitesmoke;
+    --black1: black;
+    --black2: rgb(58, 57, 57);
+    --text1: black;
+    --text2: white;
+}
+.light{
+  --bg: var(--white1);
+  --bg2: var(--white2);
+  --light-text: var(--text1)
+  
+}
+.dark{
+    --bg: var(--black1);
+    --bg2: var(--black2);
+    --dark-text: var(--text2)
+}
+ 
+#main-div{  
+    background-color: var(--bg);
     color: white;
     border-radius: 20px;
     padding: 50px 0 20px 0;
-}
-#bright{
-     opacity: 0.6;
 }
 
 .parent-icon{
     text-align: center;
 }
 .icon{
-    border: solid rgb(58, 57, 57);
-    background-color: rgb(58, 57, 57);
+    border: var(--bg2);
+    background-color: var(--bg2);
     width: 20%;
     height: 20%;
     padding: 10px;
+    color:  var(--light-text)
 }
 .display{
     height: 40%;
@@ -40,13 +55,13 @@ body{
     border-radius: 15px;
     background: transparent;
     padding: 20px;
-    color: #eaeaea
+    color: var(--light-text);
 }
 .cal-working{
     margin-bottom: 20px;
 }
 .cal-symbols{
-    background: rgb(58, 57, 57);
+    background: var(--bg2);
     height: 55%;
     margin: 0 10px;
     border-radius: 15px;
@@ -58,13 +73,13 @@ body{
     width: 70px;
     height: 65px;
     border-radius: 10px;
-    background: black;
+    background: var(--bg);
     font-size: 20px;
     padding: 10px;
     margin:  5px 7px;
 }
 .font-color{
-    color: white;
+    color: var(--light-text);
 }
 .fontcolor{
     color: turquoise;
