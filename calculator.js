@@ -21,12 +21,10 @@ function Delete() {
 }
 
 function enableDarkMode() {
-    alert("color changes")
     mainDOM.classList.replace('light', 'dark');  
 }  
 
 function enableLightMode() {
-    alert("color changes")
     mainDOM.classList.replace('dark', 'light');
 }
 
