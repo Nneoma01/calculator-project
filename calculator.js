@@ -2,10 +2,17 @@ const outputScreen = document.getElementById("outputScreen");
 const lightMode = document.getElementById("lightMode");
 const darkMode = document.getElementById("darkMode");
 const mainDOM= document.getElementById("main-div")
+const buttons = document.querySelectorAll("button")
+const specialCharacters = ["%", "+", "/", "*", "="];
+let output = "";
+display.value = output;
 
 
 function display(num) {
     outputScreen.value += num;
+    if (output === "" && specialCharacters.includes(num)){
+        return output += num;
+    }
 }
 
 function Calculate() {

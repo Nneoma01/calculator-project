@@ -72,7 +72,7 @@ body{
     border: 0;
     width: 70px;
     height: 65px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: var(--bg);
     font-size: 20px;
     padding: 10px;
@@ -87,11 +87,8 @@ body{
 .font{
     color: crimson;
 }
+button:hover{
+    transform: scale(1.1);
+}
 
-/* classlist css */
-.bright-container{
-    background-color: white;
-}
-.bright-icon{
-    background-color: whitesmoke;
-}
+
