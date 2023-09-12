@@ -1,5 +1,5 @@
 const outputScreen = document.getElementById("outputScreen");
-const percent =  document.getElementById("percent");
+// const percent =  document.getElementById("percent");
 const lightMode = document.getElementById("lightMode");
 const darkMode = document.getElementById("darkMode");
 const mainDOM= document.getElementById("main-div")
@@ -12,7 +12,7 @@ const button = document.querySelectorAll("button")
 
 function display(value) {
     const operators = ["*", "/", "-", "+", ".", "%"];
-    const operator = ["*", "/", "+", ".", "%"];
+    // const operator = ["*", "/", "+", ".", "%"];
     const lastValue = outputScreen.value[outputScreen.value.length-1];
 
     if (operators.includes(lastValue)) {
@@ -30,18 +30,42 @@ function display(value) {
     }
 
     if (outputScreen.value.length === 1 && lastValue == "0"){
-       if (value == "."){
+        if (value == "."){
            outputScreen.value += value;
            return
-       }
+        }   
+    
+        // outputScreen.value = parseFloat(outputScreen.value += value); 
 
-        outputScreen.value = parseFloat(outputScreen.value += value)
-        return
+        if (value == "." && outputScreen.value.includes(".")){
+            outputScreen.value = parseFloat(outputScreen.value += value); 
+            return
+        }
+       
     }
+    // function appendToInput(value) {
+    //     // Check if the input already contains a decimal point
+    //     if (value === '.' && outputScreen.value.includes('.')) {
+    //         // If it does, do nothing
+    //         return;
+    //     }
+    // }
+
+    
 
     outputScreen.value += value;
 
 }
+
+// function appendToInput(value) {
+//     // Check if the input already contains a decimal point
+//     if (value === '.' && outputScreen.value.includes('.')) {
+//         // If it does, do nothing
+//         return;
+//     }
+
+//     outputScreen.value += value;
+// }
 
 // function validateVal(num){
 //     // alert("helllo")
