@@ -1,18 +1,12 @@
-const outputScreen = document.getElementById("outputScreen");
-// const percent =  document.getElementById("percent");
+const outputScreen = document.getElementById("outputScreen");;
 const lightMode = document.getElementById("lightMode");
 const darkMode = document.getElementById("darkMode");
 const mainDOM= document.getElementById("main-div")
 const button = document.querySelectorAll("button")
-// const specialCharacters = ["%", "+", "/", "*", "="];
-// const lastValue = button.value(button.value.length-1);
-// let output = "";
-// display.value = output;
 
 
 function display(value) {
     const operators = ["*", "/", "-", "+", ".", "%"];
-    // const operator = ["*", "/", "+", ".", "%"];
     const lastValue = outputScreen.value[outputScreen.value.length-1];
 
     if (operators.includes(lastValue)) {
@@ -35,14 +29,29 @@ function display(value) {
            return
         }   
     
-        // outputScreen.value = parseFloat(outputScreen.value += value); 
+        outputScreen.value = parseFloat(outputScreen.value += value); 
+        return
 
-        if (value == "." && outputScreen.value.includes(".")){
-            outputScreen.value = parseFloat(outputScreen.value += value); 
-            return
-        }
+       
+
+        // if (value == "." && outputScreen.value.includes(".")){
+        //     outputScreen.value = parseFloat(outputScreen.value += value); 
+        //     return
+        // }
        
     }
+
+    // let decimalPointUsed = false
+    // if (value === '.' && decimalPointUsed) {
+    //           // Prevent multiple decimal points
+    //     return;
+    // }
+    // outputScreen.value += value;
+    // if (value === '.') {
+    //    decimalPointUsed = true;
+    // } 
+
+    
     // function appendToInput(value) {
     //     // Check if the input already contains a decimal point
     //     if (value === '.' && outputScreen.value.includes('.')) {
@@ -56,6 +65,18 @@ function display(value) {
     outputScreen.value += value;
 
 }
+
+// let decimalPointUsed = false;
+// function appendToDisplay(value) {
+//     if (value === '.' && decimalPointUsed) {
+//       // Prevent multiple decimal points
+//       return;
+//     }
+//     outputScreen.value += value;
+//     if (value === '.') {
+//       decimalPointUsed = true;
+//     }
+//   }
 
 // function appendToInput(value) {
 //     // Check if the input already contains a decimal point
