@@ -14,11 +14,14 @@ function display(value) {
             if (value == "-"){
                 outputScreen.value += value; 
                 return
-            } 
-            if (value == "/" || value == "+" || value == "*" ){
-                outputScreen.value.replace("lastValue", "value")
-                return 
+            } else if (value !== "-" && value == operators){
+                outputScreen.value.slice(0, -1);
+                lastValue += value;
             }
+            // if (value == "/" || value == "+" || value == "*" ){
+            //     outputScreen.value.replace("lastValue", "value")
+            //     return 
+            // }
         }
 
         if(operators.includes(value)){
@@ -28,29 +31,30 @@ function display(value) {
     }
 
     if (outputScreen.value.length === 1 && lastValue == "0"){
-        if (value !== operators){
-            outputScreen.value = value;
-            return
-        }
+        // if (value !== operators){
+        //     outputScreen.value = value;
+        //     return
+        // }
         if (value == "."){
            outputScreen.value += value;
            return
         }   
-        
-    
-        // outputScreen.value = parseFloat(outputScreen.value += value); 
-        // return
-
-       
-
-       
-       
+        outputScreen.value = parseFloat(outputScreen.value += value); 
+        return 
     }
-     if (outputScreen.value.includes(".") && outputScreen.value.length > 1){
+
+    if (outputScreen.value.includes(".") && outputScreen.value.length > 1){
         if (value == "."){
             return
         }
-     } 
+
+        if (outputScreen.value.includes(operators)){
+            if (value == "."){
+                outputScreen.value += value;
+                return
+            }
+        }
+    } 
     outputScreen.value += value;
 }
  
