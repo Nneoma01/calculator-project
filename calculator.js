@@ -13,29 +13,25 @@ function display(value) {
         if (lastValue == "*" || lastValue == "/"){
             if (value == "-"){
                 outputScreen.value += value; 
-                return
-            } else if (value !== "-" && value == operators){
-                outputScreen.value.slice(0, -1);
-                lastValue += value;
+            } else if (value == "+" || value == "*" || value == "/"){
+                outputScreen.value = outputScreen.value.replace(lastValue, value);
             }
-            // if (value == "/" || value == "+" || value == "*" ){
-            //     outputScreen.value.replace("lastValue", "value")
-            //     return 
-            // }
+        }
+
+        if (lastValue == "+" || lastValue == "-") {
+            if (value == "+" || value == "*" || value == "/" || value == "-"){
+                outputScreen.value = outputScreen.value.replace(lastValue, value);
+            }
         }
 
         if(operators.includes(value)){
            console.log("double operator")
-          return
+           return
         }
     }
 
     if (outputScreen.value.length === 1 && lastValue == "0"){
-        // if (value !== operators){
-        //     outputScreen.value = value;
-        //     return
-        // }
-        if (value == "."){
+        if (value == "." || value == "+" ||  value == "-" || value == "*" || value == "/"){
            outputScreen.value += value;
            return
         }   
@@ -44,17 +40,13 @@ function display(value) {
     }
 
     if (outputScreen.value.includes(".") && outputScreen.value.length > 1){
-        if (value == "."){
+        if (outputScreen.value.includes("+")|| outputScreen.value.includes("-")|| outputScreen.value.includes("*")||  outputScreen.value.includes("/") && value == "."){
+            outputScreen.value += value;
             return
-        }
-
-        if (outputScreen.value.includes(operators)){
-            if (value == "."){
-                outputScreen.value += value;
-                return
-            }
-        }
-    } 
+        }else if (value == "."){
+            return
+        }    
+    }
     outputScreen.value += value;
 }
  
